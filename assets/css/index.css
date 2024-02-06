@@ -82,8 +82,9 @@ h5 {
 .button:hover {
   background-color: transparent;
   color: var(--color-primary);
-  border: 1px solid var(--color-primary);
+  box-shadow: inset 0 0 0 1px var(--color-primary);
 }
+
 
 .btn-light {
   background-color: white;
@@ -94,7 +95,7 @@ h5 {
 .btn-light:hover{
   background-color: transparent;
   color: white;
-  border: 1px solid white;
+  box-shadow: inset 0 0 0 1px white;
 }
 
 .text-m {
@@ -420,6 +421,5 @@ input:focus{
     display: flex !important;
     justify-content: flex-start !important;
     margin-top: 10px;
-
   }
 }
