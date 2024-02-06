@@ -234,7 +234,6 @@ h5 {
 .content-start-way {
   border-radius: 10px;
   background-color: var(--color-dark-purpl);
-  background-image: url("/assets/img/img-back-way.png");
   object-fit: cover;
   color: white;
   text-align: center;
