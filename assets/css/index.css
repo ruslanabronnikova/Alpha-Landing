@@ -4,16 +4,15 @@
 @import url(vendors/bootstrap.min.css.map);
 
 :root {
-  --color-back-page: #FFFFFF;
-  --color-primary: #7E7CEF;
+  --color-back-page: #ffffff;
+  --color-primary: #7e7cef;
   --color-text: #454545;
-  --color-dark-purpl: #7B59C3;
-
+  --color-dark-purpl: #7b59c3;
 }
 
 body {
   background-color: var(--color-var-back-page);
-  font-family: 'Inter', 'sans-serif';
+  font-family: "Inter", "sans-serif";
   margin: 0;
   padding: 0;
   border: 0;
@@ -26,7 +25,7 @@ button {
 }
 
 a {
-  color: var(--color-var-text)
+  color: var(--color-var-text);
 }
 
 ul {
@@ -36,13 +35,13 @@ ul {
 
 h1 {
   font-size: 30px;
-  line-height: 1.1;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
 h2 {
   font-size: 25px;
-  line-height: 1.1;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
@@ -54,13 +53,13 @@ h3 {
 
 h4 {
   font-size: 18px;
-  line-height: 1.1;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
 h5 {
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
@@ -77,11 +76,25 @@ h5 {
   border: 0;
   color: white;
   align-items: center;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
 }
 
 .btn-light {
   background-color: white;
   color: var(--color-primary);
+  transition: all 0.3s;
+}
+
+.btn-light:hover{
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
 }
 
 .text-m {
@@ -93,15 +106,42 @@ h5 {
 }
 
 .bg-card-light {
-  background-color: #EFE9FE;
+  background-color: #efe9fe;
 }
 
 .bg-card-normal {
-  background-color: #DBCEFF;
+  background-color: #dbceff;
 }
 
 .bg-card-dark {
-  background-color: #7B59C3;
+  background-color: #7b59c3;
+}
+
+.nav-link {
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: all .6s;
+}
+
+.nav-link:hover {
+  color: var(--color-dark-purpl) !important;
+}
+
+.nav-link .active {
+  color: var(--color-dark-purpl);
+  text-decoration: 1px solid var(--color-dark-purpl);
+}
+
+.navbar-toggler {
+  border: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.btn-close:focus {
+  box-shadow: none;
 }
 
 .img-wrapper {
@@ -110,12 +150,11 @@ h5 {
 
 .img-shadow {
   position: absolute;
-  bottom: 20px; 
-  transform: translateX(50%); 
-  width: 100%; 
-  height: 100%; 
-  border-radius: 50%; 
-  background-color: #AE8DFF;
+  bottom: 20px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ae8dff;
   filter: blur(180px);
   z-index: -1;
 }
@@ -160,7 +199,7 @@ h5 {
 .info-title {
   padding: 15px 15px;
   border-radius: 100px;
-  background-color: #E1E4FE;
+  background-color: #e1e4fe;
   text-align: center;
 }
 
@@ -194,9 +233,9 @@ h5 {
 .content-start-way {
   border-radius: 10px;
   background-color: var(--color-dark-purpl);
-  background-image: url('/assets/img/img-back-way.png');
+  background-image: url("/assets/img/img-back-way.png");
   object-fit: cover;
-  color: white; 
+  color: white;
   text-align: center;
   padding-top: 80px;
   padding-bottom: 30px;
@@ -222,18 +261,26 @@ h5 {
   gap: 20px;
 }
 
+.cards-slider {
+  display: none;
+}
+
 /* Стили для инпутов */
+
+input:focus{
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .form-control {
   border: none;
-  border-bottom: 1px solid #ccc; /* Добавление только нижнего бордера */
-  outline: none; /* Убираем контур при фокусе */
-  transition: border-color 0.3s ease-in-out; /* Плавное изменение цвета бордера */
+  border-bottom: 1px solid #ccc;
   border-radius: 0;
 }
 
 /* Стили для активного состояния инпутов */
 .form-control:focus {
-  border-color: var(--color-primary); /* Изменение цвета бордера при фокусе */
+  border-color: var(--color-dark-purpl) !important;
 }
 
 /* Стили для label и placeholder */
@@ -245,14 +292,13 @@ h5 {
 
 /* Стили для placeholder */
 .form-control::placeholder {
-  color: #999; /* Цвет placeholder */
+  color: #999;
 }
-
 
 .footer-container {
   padding-top: 25px;
   padding-bottom: 15px;
-  border-top: 1px solid #B9B9B9;
+  border-top: 1px solid #b9b9b9;
 }
 
 .footer-list-bank {
@@ -273,12 +319,107 @@ h5 {
   text-transform: uppercase;
 }
 
+@media (max-width: 1199px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+
+  h5 {
+    font-size: 12px;
+  }
+
+  .contaner-cards {
+    display: none !important;
+  }
+
+  .cards-slider {
+    display: block;
+  }
+
+  .carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+    background-color: white;
+    padding: 35px 25px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    /* height: 120px; */
+}
+}
+
 @media (max-width: 1024px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+
+  h5 {
+    font-size: 12px;
+  }
 
   .footer-doc {
     display: flex !important;
     flex-direction: column !important;
     gap: 5px;
   }
+}
 
+@media (max-width: 768px) {
+  .card{
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .card-img {
+    max-width: 50px; 
+  }
+
+  .content-start-way {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 35px;
+  } 
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-list-bank {
+    display: flex !important;
+    justify-content: flex-start !important;
+    margin-top: 10px;
+
+  }
 }
