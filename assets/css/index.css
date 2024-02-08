@@ -1,7 +1,5 @@
-@import url(vendors/normalize.css);
-@import url(vendors/bootstrap-reboot.css);
-@import url(vendors/bootstrap.min.css);
-@import url(vendors/bootstrap.min.css.map);
+@import url(../../vendor/normalize.css);
+@import url(../../vendor/fonts/inter.css);
 
 :root {
   --color-back-page: #ffffff;
